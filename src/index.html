@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>响应式后台管理系统</title>
+    <link rel="stylesheet" href="./font/iconfont.css" />
+    <!-- 引入echart的js文件 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.min.js"></script>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <div class="header-container">
+        <a class="header-img">
+          <img src="./image/logo-1.png" alt="" />
+        </a>
+        <span class="icon-nav lg-hidden sm-show" id="J_nav">
+          <img src="./image/icon-nav.png" alt="" />
+        </span>
+        <ul class="xxlg-show sm-hidden" id="J_nav_list">
+          <li><a href="#">概况</a></li>
+          <li><a href="#">教务</a></li>
+          <li><a href="#">营销</a></li>
+          <li><a href="#">运销</a></li>
+          <li><a href="#">用户</a></li>
+          <li><a href="#">交易</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- nav-side start -->
+    <nav class="nav-side" id="J_menu">
+      <div class="menu-list">
+        <div class="menu-list-title">
+          <span class="menu-icon iconfont icon-jiaoxuepingjia"></span>
+          教学管理
+        </div>
+        <ul class="menu-xxl-hidden">
+          <li><a href="#">班级管理</a></li>
+          <li><a href="#">直播管理</a></li>
+          <li><a href="#">课程管理</a></li>
+          <li><a href="#">题库管理</a></li>
+          <li><a href="#">分类标签</a></li>
+        </ul>
+      </div>
+      <div class="menu-list">
+        <div class="menu-list-title">
+          <span class="menu-icon iconfont icon-ren1"></span>
+          助学管理
+        </div>
+        <ul class="menu-xxl-hidden">
+          <li><a href="#">班级管理</a></li>
+          <li><a href="#">直播管理</a></li>
+        </ul>
+      </div>
+      <div class="menu-list">
+        <div class="menu-list-title">
+          <span class="menu-icon iconfont icon-yingxiao"></span>
+          营销管理
+        </div>
+        <ul class="menu-xxl-hidden">
+          <li><a href="#">班级管理</a></li>
+          <li><a href="#">直播管理</a></li>
+          <li><a href="#">课程管理</a></li>
+          <li><a href="#">题库管理</a></li>
+          <li><a href="#">分类标签</a></li>
+        </ul>
+      </div>
+      <div class="menu-list">
+        <div class="menu-list-title">
+          <span class="menu-icon iconfont icon-ren"></span>
+          用户管理
+        </div>
+        <ul class="menu-xxl-hidden">
+          <li><a href="#">班级管理</a></li>
+          <li><a href="#">题库管理</a></li>
+          <li><a href="#">分类标签</a></li>
+        </ul>
+      </div>
+      <div class="menu-list">
+        <div class="menu-list-title">
+          <span class="menu-icon iconfont icon-a-dingdanyichenggong"></span>
+          订单管理
+        </div>
+        <ul class="menu-xxl-hidden">
+          <li><a href="#">班级管理</a></li>
+          <li><a href="#">直播管理</a></li>
+          <li><a href="#">课程管理</a></li>
+          <li><a href="#">题库管理</a></li>
+          <li><a href="#">分类标签</a></li>
+        </ul>
+      </div>
+      <div class="menu-list">
+        <div class="menu-list-title">
+          <span class="menu-icon iconfont icon-jiaoxuepingjia"></span>
+          数据分析
+        </div>
+        <ul class="menu-xxl-hidden">
+          <li><a href="#">班级管理</a></li>
+          <li><a href="#">直播管理</a></li>
+        </ul>
+      </div>
+      <div class="menu-list">
+        <div class="menu-list-title">
+          <span class="menu-icon iconfont icon-daichuli"></span>
+          运营
+        </div>
+        <ul class="menu-xxl-hidden">
+          <li><a href="#">班级管理</a></li>
+          <li><a href="#">直播管理</a></li>
+          <li><a href="#">课程管理</a></li>
+          <li><a href="#">题库管理</a></li>
+          <li><a href="#">分类标签</a></li>
+        </ul>
+      </div>
+      <div class="menu-list">
+        <div class="menu-list-title">
+          <span class="menu-icon iconfont icon-tubiao_qudao"></span>
+          渠道管理
+        </div>
+        <ul class="menu-xxl-hidden">
+          <li><a href="#">班级管理</a></li>
+        </ul>
+      </div>
+      <div id="button" class="button xlg-hidden sm-btn-show">
+        <img src="./image/btn.png" alt="" />
+      </div>
+    </nav>
+    <!-- end nav-side -->
+
+    <!-- main start  -->
+    <main class="main">
+      <div class="main-row">
+        <div class="col col-xxlg-top col-xxlg-3 col-lg-6 col-sm-12">
+          <div class="col-container">
+            <h3 class="col-container-title">最新学员</h3>
+            <p class="con">
+              <span class="data">最后一周数据</span
+              ><span class="data-num">688</span>
+            </p>
+            <p class="look-desc">查看详情</p>
+          </div>
+        </div>
+        <div class="col col-xxlg-top col-sm-top col-xxlg-3 col-lg-6 col-sm-12">
+          <div class="col-container">
+            <h3 class="col-container-title">订单</h3>
+            <p class="con">
+              <span class="data">未支付订单</span
+              ><span class="data-num">11</span>
+            </p>
+            <p class="look-desc">查看详情</p>
+          </div>
+        </div>
+        <div class="col col-xxlg-top col-lg-top col-xxlg-3 col-lg-6 col-sm-12">
+          <div class="col-container col-xxlg-top">
+            <h3 class="col-container-title col3">当月利润</h3>
+            <p class="con">
+              <span class="data">截至到昨天</span
+              ><span class="data-num">68596</span>
+            </p>
+            <p class="look-desc">查看详情</p>
+          </div>
+        </div>
+        <div class="col col-xxlg-top col-lg-top col-xxlg-3 col-lg-6 col-sm-12">
+          <div class="col-container">
+            <h3 class="col-container-title">快到期学员</h3>
+            <p class="con">
+              <span class="data">最后一周数据</span
+              ><span class="data-num">852</span>
+            </p>
+            <p class="look-desc">查看详情</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-row">
+        <div class="col col-xxlg-8 col-md-12">
+          <div class="col-container row2">
+            <h3 class="col-container-title">最新报名学员</h3>
+            <ul class="stulist">
+              <li>
+                <div class="customer">
+                  <span class="uname">顾客</span>
+                </div>
+                <p class="product">产品</p>
+                <span class="fapiao">发票</span>
+                <span class="price">价格</span>
+                <span class="state">状态</span>
+              </li>
+              <li>
+                <div class="customer">
+                  <span class="customer-img">
+                    <img src="./image/tx1.png" alt="" />
+                  </span>
+                  <span class="uname ssm-uname">张三</span>
+                </div>
+                <p class="product">
+                  web前端体系课程，是目前最棒的学习体系,目前最棒的学习体系
+                </p>
+                <span class="fapiao">已开</span>
+                <span class="price">6888</span>
+                <span class="state ssm-state">已发货</span>
+              </li>
+              <li>
+                <div class="customer">
+                  <span class="customer-img">
+                    <img src="./image/tx2.png" alt="" />
+                  </span>
+                  <span class="uname ssm-uname">李四</span>
+                </div>
+                <p class="product">web前端0基础到实战</p>
+                <span class="fapiao">已开</span>
+                <span class="price">6888</span>
+                <span class="state ssm-state">已发货</span>
+              </li>
+              <li>
+                <div class="customer">
+                  <span class="customer-img">
+                    <img src="./image/tx1.png" alt="" />
+                  </span>
+                  <span class="uname ssm-uname">小丽</span>
+                </div>
+                <p class="product">JavaScript系列课程</p>
+                <span class="fapiao">已开</span>
+                <span class="price">6888</span>
+                <span class="state ssm-state">已发货</span>
+              </li>
+              <li>
+                <div class="customer">
+                  <span class="customer-img">
+                    <img src="./image/tx2.png" alt="" />
+                  </span>
+                  <span class="uname ssm-uname">小红</span>
+                </div>
+                <p class="product">css 6大主流布局</p>
+                <span class="fapiao">已开</span>
+                <span class="price">6888</span>
+                <span class="state ssm-state">已发货</span>
+              </li>
+              <li>
+                <div class="customer">
+                  <span class="customer-img">
+                    <img src="./image/tx2.png" alt="" />
+                  </span>
+                  <span class="uname ssm-uname">八戒</span>
+                </div>
+                <p class="product">移动WebApp开发课程</p>
+                <span class="fapiao">已开</span>
+                <span class="price">6888</span>
+                <span class="state ssm-state">已发货</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col col-xxlg-4 col-md-12">
+          <div class="col-container">
+            <h3 class="col-container-title">热门课程</h3>
+            <ul class="hot-course">
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-css"></span>
+                  <div class="hot-course-con">
+                    <p>css 6大主流布局技术</p>
+                    <span>报名人:12344</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-vuejs"></span>
+                  <div class="hot-course-con">
+                    <p>Javascript基础入门到实战</p>
+                    <span>报名人:166344</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-shouji"></span>
+                  <div class="hot-course-con">
+                    <p>Vue基础到实战</p>
+                    <span>报名人：34432</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-js"></span>
+                  <div class="hot-course-con">
+                    <p>React入门到精通</p>
+                    <span>报名人：4222</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-js"></span>
+                  <div class="hot-course-con">
+                    <p>移动端WebAPP开发</p>
+                    <span>报名人数：2333</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main-row">
+        <div class="col col-xxlg-4 col-md-6 col-sm-12">
+          <div class="col-container">
+            <h3 class="col-container-title">站长公告</h3>
+            <a href="#" class="notice">
+              <div class="notice-img">
+                <img src="./image/img1.png" alt="" />
+              </div>
+              <p class="notice-con">
+                艾编程是在大数据人工智能时代高速发展的今天成立的一家以提
+                供各行业商业项目研发解决方案为核心的在线学习平台。
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="col col-xxlg-8 col-md-6 col-sm-12">
+          <div class="col-container Common">
+            <h3 class="col-container-title">常用入口</h3>
+            <ul class="Common-entrance md-Common-entrance">
+              <li>
+                <a href="#">
+                  <span
+                    class="Common-entrance-icon iconfont icon-kechengguanli"
+                  ></span>
+                  <span class="Common-entrance-title">课程管理</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="Common-entrance-icon iconfont icon-banji"></span>
+                  <span class="Common-entrance-title">班级管理</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span
+                    class="Common-entrance-icon iconfont icon-youhuiquan"
+                  ></span>
+                  <span class="Common-entrance-title">优惠劵</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span
+                    class="Common-entrance-icon iconfont icon-huiyuanguanli"
+                  ></span>
+                  <span class="Common-entrance-title">会员管理</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="Common-entrance-icon iconfont icon-web"></span>
+                  <span class="Common-entrance-title">web装修</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span
+                    class="Common-entrance-icon iconfont icon-yonghuguanli"
+                  ></span>
+                  <span class="Common-entrance-title">用户管理</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span
+                    class="Common-entrance-icon iconfont icon-fapiao"
+                  ></span>
+                  <span class="Common-entrance-title">商品订单</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span
+                    class="Common-entrance-icon iconfont icon-ketang"
+                  ></span>
+                  <span class="Common-entrance-title">公开课</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main-row">
+        <div class="col col-xxlg-4 col-md-6 col-sm-12">
+          <div class="col-container money">
+            <h3 class="col-container-title">课程交易金额</h3>
+            <ul class="hot-course">
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-css"></span>
+                  <div class="hot-course-con">
+                    <p>css 6大主流布局技术</p>
+                    <span>报名人:12344</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-vuejs"></span>
+                  <div class="hot-course-con">
+                    <p>Javascript基础入门到实战</p>
+                    <span>报名人:166344</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-shouji"></span>
+                  <div class="hot-course-con">
+                    <p>Vue基础到实战</p>
+                    <span>报名人：34432</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-js"></span>
+                  <div class="hot-course-con">
+                    <p>React入门到精通</p>
+                    <span>报名人：4222</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="hot-course-icon iconfont icon-js"></span>
+                  <div class="hot-course-con">
+                    <p>移动端WebAPP开发</p>
+                    <span>报名人数：2333</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col col-xxlg-4 col-md-6 col-sm-12">
+          <div class="col-container echart" id="echart">
+            <!-- 添加echar容器 -->
+            <div id="J_echart1"></div>
+          </div>
+        </div>
+        <div class="col col-xxlg-4 col-md-12">
+          <div class="col-container echart" id="echart">
+            <!-- 添加echar容器 -->
+            <div id="J_echart2"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main end  -->
+
+    <!-- footer start -->
+    <footer class="footer">
+      Copyright @Copyright 2004 - 2022 京东JD.com 版权所有
+    </footer>
+    <!-- end footer -->
+  </body>
+
+  <script>
+    // 头部导航模块
+    // 获取J_nav
+    var J_nav = document.getElementById("J_nav");
+    var J_nav_list = document.getElementById("J_nav_list");
+    // console.log(J_nav, J_nav_list);
+    J_nav.onclick = function () {
+      // 点击时添加类名，再次点击删除类名
+      J_nav_list.classList.toggle("sm-ul-show");
+    };
+
+    // 侧边导航栏
+    var menuTitles = document.querySelectorAll(
+      "#J_menu .menu-list .menu-list-title"
+    );
+    var J_menu = document.getElementById("J_menu");
+    console.log(menuTitles);
+    var len = menuTitles.length;
+    for (var i = 0; i < len; i++) {
+      menuTitles[i].flag = "hidden";
+      menuTitles[i].onclick = function () {
+        if (this.flag === "hidden") {
+          // 全屏时点击
+          this.classList.add("menu-list-title-active");
+          var h = this.nextElementSibling.clientHeight;
+          // console.log(h);
+          this.parentNode.style.height = h + 40 + "px";
+
+          // 缩小情况下再点击
+          J_menu.style.width = "260px";
+          this.flag = "show";
+        } else {
+          this.classList.remove("menu-list-title-active");
+          this.parentNode.style.height = "40px";
+          this.flag = "hidden";
+        }
+      };
+    }
+    window.addEventListener("resize", function () {
+      var w = document.documentElement.clientWidth;
+      if (w > 1400) {
+        J_menu.style.width = "260px";
+      }
+      if (w < 1400) {
+        for (var i = 0; i < len; i++) {
+          menuTitles[i].parentNode.style.height = "40px";
+          menuTitles[i].classList.remove("menu-list-title-active");
+          J_menu.style.width = "75px";
+          menuTitles[i].flag = "hidden";
+        }
+      }
+    });
+    var btn = document.getElementById("button");
+    // console.log(btn);
+    btn.onclick = function () {
+      var w = J_menu.clientWidth;
+      // console.log(w);
+      if (w < 100) {
+        // 开,J_menu宽度变为260px
+        J_menu.style.width = "260px";
+      } else {
+        // 关
+        J_menu.style.width = "75px";
+        for (var i = 0; i < len; i++) {
+          menuTitles[i].classList.remove("menu-list-title-active");
+          menuTitles[i].parentNode.style.height = "40px";
+          menuTitles[i].flag = "hidden";
+        }
+      }
+    };
+  </script>
+  <script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart1 = echarts.init(document.getElementById("J_echart1"));
+    var myChart2 = echarts.init(document.getElementById("J_echart2"));
+
+    // 指定图表的配置项和数据
+    option1 = {
+      title: {
+        text: "数据分析",
+      },
+      tooltip: {
+        trigger: "axis",
+        axisPointer: {
+          type: "cross",
+          label: {
+            backgroundColor: "#6a7985",
+          },
+        },
+      },
+      legend: {
+        data: ["Email", "Union Ads", "Video Ads", "Direct", "Search Engine"],
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {},
+        },
+      },
+      grid: {
+        left: "3%",
+        right: "4%",
+        bottom: "3%",
+        containLabel: true,
+      },
+      xAxis: [
+        {
+          type: "category",
+          boundaryGap: false,
+          data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        },
+      ],
+      yAxis: [
+        {
+          type: "value",
+        },
+      ],
+      series: [
+        {
+          name: "Email",
+          type: "line",
+          stack: "Total",
+          areaStyle: {},
+          emphasis: {
+            focus: "series",
+          },
+          data: [120, 132, 101, 134, 90, 230, 210],
+        },
+        {
+          name: "Union Ads",
+          type: "line",
+          stack: "Total",
+          areaStyle: {},
+          emphasis: {
+            focus: "series",
+          },
+          data: [220, 182, 191, 234, 290, 330, 310],
+        },
+        {
+          name: "Video Ads",
+          type: "line",
+          stack: "Total",
+          areaStyle: {},
+          emphasis: {
+            focus: "series",
+          },
+          data: [150, 232, 201, 154, 190, 330, 410],
+        },
+        {
+          name: "Direct",
+          type: "line",
+          stack: "Total",
+          areaStyle: {},
+          emphasis: {
+            focus: "series",
+          },
+          data: [320, 332, 301, 334, 390, 330, 320],
+        },
+        {
+          name: "Search Engine",
+          type: "line",
+          stack: "Total",
+          label: {
+            show: true,
+            position: "top",
+          },
+          areaStyle: {},
+          emphasis: {
+            focus: "series",
+          },
+          data: [820, 932, 901, 934, 1290, 1330, 1320],
+        },
+      ],
+    };
+
+    option2 = {
+      title: {
+        text: "交易平台",
+        subtext: "Fake Data",
+        left: "center",
+      },
+      tooltip: {
+        trigger: "item",
+      },
+      legend: {
+        orient: "vertical",
+        left: "left",
+      },
+      series: [
+        {
+          name: "Access From",
+          type: "pie",
+          radius: "50%",
+          data: [
+            { value: 1048, name: "Search Engine" },
+            { value: 735, name: "Direct" },
+            { value: 580, name: "Email" },
+            { value: 484, name: "Union Ads" },
+            { value: 300, name: "Video Ads" },
+          ],
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: "rgba(0, 0, 0, 0.5)",
+            },
+          },
+        },
+      ],
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart1.setOption(option1);
+    myChart2.setOption(option2);
+    window.addEventListener("resize", function () {
+      myChart1.resize();
+      myChart2.resize();
+    });
+  </script>
+</html>
