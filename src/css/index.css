@@ -1,0 +1,380 @@
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 222;
+  padding: 20px;
+  width: 100%;
+  height: 115px;
+  background-color: #f1f5f9;
+}
+.header-container {
+  height: 75px;
+  border-radius: 10px;
+  background-color: #fff;
+  /* overflow: hidden; */
+}
+
+.nav-side {
+  position: fixed;
+  left: 20px;
+  top: 115px;
+  width: 260px;
+  height: 812px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 20px 0 20px;
+}
+.main {
+  /* min-height: 1000px; */
+  margin: 115px 10px 60px 290px;
+  /* background-color: rgb(145, 35, 255); */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(37, 37, 37);
+}
+.main-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  /* min-height: 400px; */
+  padding: 10px 10px;
+}
+.col-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 28px 0 0 30px;
+}
+/* header-container start  */
+.header-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header-container .header-img {
+  margin: 0 32px;
+  width: 97px;
+  height: 38px;
+}
+.header-container .header-img img {
+  width: 100%;
+  height: 100%;
+}
+/* .header-container ul {
+  display: flex;
+} */
+.header-container ul li a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #000;
+  border-radius: 10px;
+}
+.header-container ul li a:hover {
+  color: #9c71fc;
+  background-color: #efe8ff;
+}
+.header-container .icon-nav {
+  margin-left: 10px;
+  width: 26px;
+  height: 26px;
+}
+
+/* end header-container */
+
+/* .nav-side start  */
+.menu-list {
+  /* width: 220px; */
+  height: 40px;
+  transition: height 0.5s ease;
+  overflow: hidden;
+}
+.menu-list .menu-list-title {
+  width: 220px;
+  height: 40px;
+  line-height: 40px;
+  background: url(./image/jiantou.png) no-repeat no-repeat 200px center;
+  cursor: pointer;
+}
+.menu-list .menu-list-title-active {
+  color: #fff;
+  background: url(./image/jiantou-active.png) no-repeat 200px center;
+  background-color: #f77080;
+}
+.menu-icon {
+  font-size: 18px;
+  padding: 0 12px 0 7px;
+}
+.menu-list ul li {
+  width: 220px;
+  line-height: 40px;
+  height: 40px;
+}
+.menu-list ul li a {
+  color: #000;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.menu-list ul li a:hover {
+  color: #9c71fc;
+}
+.menu-list ul li a::before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  padding: 0 13px;
+  background: url(./image/radio.png) no-repeat center;
+}
+.button {
+  margin-top: 10px;
+  width: 34px;
+  height: 34px;
+}
+.button img {
+  width: 100%;
+  height: 100%;
+}
+/* end menu-list */
+
+/* main start  */
+.col-container-title {
+  font-size: 20px;
+  color: #5b5b80;
+}
+.con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 17px;
+  margin-bottom: 8px;
+  height: 48px;
+}
+.con .data {
+  font-size: 16px;
+  color: #c5c5c5;
+}
+/* main end  */
+.con .data-num {
+  margin-right: 38px;
+  font-size: 32px;
+  color: #5b5b5b;
+}
+.look-desc {
+  font-size: 16px;
+  color: #9c71fc;
+  margin-bottom: 16px;
+}
+.col3 {
+  padding-top: 28px;
+}
+.row2 {
+  padding-right: 30px;
+}
+.stulist {
+  width: 100%;
+  margin-top: 19px;
+  margin-bottom: 37px;
+  margin-right: 30px;
+  font-size: 16px;
+  color: #5b5b5b;
+}
+.stulist li:first-child {
+  font-size: 16px;
+  text-align: left;
+  height: 64px;
+  border-bottom: 0;
+}
+.stulist li {
+  border-bottom: 1px solid #b9b9b9;
+  display: flex;
+  height: 56px;
+  line-height: 56px;
+}
+.customer {
+  width: 19.637139%;
+  display: flex;
+}
+.customer-img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-top: 11px;
+  margin-right: 10px;
+}
+.product {
+  width: 35.325506%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.fapiao,
+.price {
+  width: 16.435432%;
+}
+.state {
+  width: 12.166488%;
+}
+.hot-course {
+  margin-top: 41px;
+  padding-bottom: 26px;
+}
+.hot-course li a {
+  display: flex;
+  margin-bottom: 18px;
+}
+.hot-course li a .hot-course-con p {
+  margin-bottom: 3px;
+  color: #5b5b5b;
+}
+.hot-course li a .hot-course-con span {
+  color: #b9b9b9;
+}
+.money .hot-course li a .hot-course-con span {
+  color: #f77080;
+}
+.hot-course li a .hot-course-icon {
+  text-align: center;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #f0f2ff;
+  color: #dbccff;
+  margin-right: 15px;
+  line-height: 52px;
+  font-size: 25px;
+}
+.hot-course li:nth-child(2) a .hot-course-icon {
+  background-color: #efe8ff;
+  color: #b595ff;
+}
+.hot-course li:nth-child(3) a .hot-course-icon {
+  background-color: #fad7dd;
+  color: #ffa9b7;
+}
+.hot-course li:nth-child(4) a .hot-course-icon {
+  background-color: #fff5e0;
+  color: #ffe6b0;
+}
+.hot-course li:nth-child(5) a .hot-course-icon {
+  background-color: #efe8ff;
+  color: #ddcfff;
+}
+
+/* 公告 */
+.notice {
+  width: 100%;
+  display: block;
+  color: #5b5b5b;
+  padding-right: 34px;
+  margin-bottom: 57px;
+}
+.notice-img {
+  width: 100%;
+  margin-top: 18px;
+}
+.notice-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.notice-con {
+  height: 38.4px;
+  font-size: 16px;
+  margin-top: 25px;
+  line-height: 1.2;
+}
+/* 常用入口 */
+.Common {
+  min-height: 460px;
+}
+.Common-entrance {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 49px;
+  margin-top: 65px;
+}
+.Common-entrance li {
+  width: 25%;
+}
+.Common-entrance li a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.Common-entrance-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #f0f2ff;
+  color: #d9aeff;
+  margin-right: 15px;
+}
+.Common-entrance li:nth-child(2) .Common-entrance-icon {
+  background-color: #efe8ff;
+  color: #be95ff;
+}
+.Common-entrance li:nth-child(3) .Common-entrance-icon {
+  background-color: #fad7dd;
+  color: #ff9eae;
+}
+.Common-entrance li:nth-child(4) .Common-entrance-icon {
+  background-color: #fff5e0;
+  color: #ffdd92;
+}
+.Common-entrance li:nth-child(5) .Common-entrance-icon {
+  background-color: #efe8ff;
+  color: #be95ff;
+}
+.Common-entrance li:nth-child(6) .Common-entrance-icon {
+  background-color: #fad7dd;
+  color: #ff9eae;
+}
+.Common-entrance li:nth-child(7) .Common-entrance-icon {
+  background-color: #fff5e0;
+  color: #ffdd92;
+}
+.Common-entrance li:nth-child(7) .Common-entrance-icon {
+  background-color: #f0f2ff;
+  color: #aeb9ff;
+}
+.Common-entrance-title {
+  font-size: 16px;
+  color: #5b5b5b;
+}
+/* main end  */
+
+/* echart图标样式设置 */
+.echart {
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+#J_echart1,
+#J_echart2 {
+  width: 100%;
+  height: 100%;
+}
+
+/* footer start  */
+.footer{
+    text-align: center;
+    line-height: 50px;
+    color: rgb(223, 222, 222);
+}
